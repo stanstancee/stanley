@@ -1,4 +1,108 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body{
+  font-size:18px;
+  font-family:"poppins",sans-serif;
 }
+*{
+box-sizing: border-box
+}
+td{
+font-size:15px;
+}
+
+.hide{
+  display: none;
+}
+.see{
+  display:block;
+}
+.row::after{
+content: "";
+clear: both;
+display: block;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.col-10{
+width: 20%;
+}
+.col-9{
+  width:80%; 
+}
+.col-8{
+width:40%;
+}
+.col-7{
+width:60%;
+}
+.col-6{
+  width:45%;
+}
+.head-icon{
+height: 70px;
+width: 70px;
+}
+.icon-menu{
+  height: 50px;
+  width: 50px;
+  color:hsl(260, 8%, 14%);
+  }
+  .nav-link{
+    color: hsl(257, 7%, 63%);
+   padding:5px;
+   text-decoration:none;
+   display: inline-flex;
+   font-weight: 10  
+  }
+.nav-link:hover{
+color:  hsl(260, 8%, 14%);
+text-decoration:underline;
+}
+
+.btn {
+
+  padding: 10px 25px;
+  color: white;
+  background: linear-gradient(90deg, hsl(4, 5%, 75%) 0%, hsl(255, 11%, 22%) 42%, hsl(257, 7%, 63%) 99%);
+  border-radius: 45px;
+  border-width: 0;
+}
+.btn:hover {
+  background:linear-gradient(to bottom, #343634 5%, #646464 100%);
+  background-color:#303836;
+}
+.btn:active {
+  position:relative;
+  top:1px;
+}
+.component-menu{
+  height: 30px;
+  width: 30px;
+  color:hsl(260, 8%, 14%);
+  }
+
+ .heading{
+   margin-bottom: 0;
+   font-weight:400;
+      color:white;
+      text-shadow:0 0 hsl(0, 0%, 75%),
+     0 0 5px hsl(0, 0%, 75%),
+     0 0 10px hsl(0, 0%, 75%),
+     0 0  20px hsl(0, 0%, 75%),
+     0 0 40px hsl(260, 8%, 14%),
+     0 0 80px hsl(260, 8%, 14%),
+     0 0 90px hsl(260, 8%, 14%),
+     0 0 100px hsl(260, 8%, 14%),
+      0 0 120px hsl(260, 8%, 14%);
+      line-height: 1.1
+     
+
+  }
+.para{
+  color:hsl(180, 66%, 49%);
+  text-align:center;
+  font-style:bold;
+  
+}
+

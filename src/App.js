@@ -1,11 +1,14 @@
 import React from "react";
 import "./styles.css";
-
+import Nav from "./components/nav";
+import Home from "./components/home"
+import useWindowSize from "./hooks/use-window-hook";
 export default function App() {
+  const size = useWindowSize();
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Nav />
+      <Home />
     </div>
   );
 }
