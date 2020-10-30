@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./footer";
 import { IoMdContacts } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
 import { FaHtml5, FaCss3, FaNode, FaReact, FaAngular } from "react-icons/fa";
@@ -19,11 +20,12 @@ const Home = () => {
     display: "inline-flex",
     fontWeight: "200",
     color: "hsl(180, 66%, 49%)",
-    marginTop: "0"
+    margin: "0"
   };
   return (
+    <div>
     <div className="row" v style={homestyle}>
-      <div className="col-8">
+      <div className="col-7">
         <h2 className="heading">Hi, I'm Stanley Ifeoha</h2>
         <h6 style={smallHeading}>--Fullstack Web Developer</h6>
       </div>
@@ -89,7 +91,12 @@ const Home = () => {
           </table>
         </p>
       </div>
-      <div className="col-6">
+      <div className="h-p">
+        <p className="paragraph">
+        I build a Web presence from the ground up -- from concept, navigation, responsive webpage, beautiful user interface and engaging user experience.
+        </p>
+      </div>
+      <div className="col-8">
         <button className="btn">
           <table>
             <tbody>
@@ -103,7 +110,7 @@ const Home = () => {
           </table>
         </button>
       </div>
-      <div className="col-6">
+      <div className="col-8">
         <button className="btn">
           <table>
             <tbody>
@@ -117,6 +124,9 @@ const Home = () => {
           </table>
         </button>
       </div>
+
+    </div>
+    <Footer />
     </div>
   );
 };

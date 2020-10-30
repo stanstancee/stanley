@@ -6,7 +6,7 @@ import useWindowSize from "./hooks/use-window-hook";
 export default function App() {
   const size = useWindowSize();
   return (
-    <div className="App">
+    <div className="App row" >
       <Nav />
       <Home />
     </div>
