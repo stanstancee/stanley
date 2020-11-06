@@ -15,7 +15,6 @@ if(width <= 760){
   footerLinkStyle.margin="5px"
 }
 
-
 return(
  
 <div className="row footer">
@@ -33,8 +32,9 @@ return(
   </thead>
   <tbody>
   <tr>
-      <td><button className="btn-f"><a href="https:github.com/stanstancee"><FaGithub className="icon-menu" /></a></button></td>
-      <td><button className="btn-f"><a href="https://www.linkedin.com/in/stancee/"><FaLinkedin className="icon-menu" /></a></button></td>
+      <td><button  className="btn-f"><a href="https:/github.com/stanstancee"><FaGithub className="icon-menu" /></a></button></td>
+      <td><button name="facebook" className="btn-f"  ><a href="https://www.linkedin.com/in/stancee/"><FaLinkedin className="icon-menu"  
+ /></a></button></td>
     </tr>
   </tbody>
 </table>
