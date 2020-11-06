@@ -1,10 +1,14 @@
 import React from "react";
 import Footer from "./footer";
+import Contact from "./contact";
 import { IoMdContacts } from "react-icons/io";
 import { FcAbout } from "react-icons/fc";
 import { FaHtml5, FaCss3, FaNode, FaReact, FaAngular } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
 import { TiTick } from "react-icons/ti";
+import service from "./serviceArray";
+import Services from "./services"
+
 
 const Home = () => {
   const image =
@@ -30,7 +34,7 @@ const Home = () => {
         <h6 style={smallHeading}>--Fullstack Web Developer</h6>
       </div>
       <div className="col-7">
-        <p className="para">
+        <p className="para" style={{margin:"0 30%"}}>
           <table>
             <tbody>
               <tr>
@@ -97,7 +101,7 @@ const Home = () => {
         </p>
       </div>
       <div className="col-8">
-        <button className="btn">
+        <button className="btn-f">
           <table>
             <tbody>
               <tr>
@@ -111,7 +115,7 @@ const Home = () => {
         </button>
       </div>
       <div className="col-8">
-        <button className="btn">
+        <button className="btn-f">
           <table>
             <tbody>
               <tr>
@@ -126,6 +130,13 @@ const Home = () => {
       </div>
 
     </div>
+    {service.map((element)=>{
+   const {id,title,content,icon} = element;
+      return(
+        <Services key={id} title={title} content={content} icon={icon} />
+      )
+    })}
+    <Contact />
     <Footer />
     </div>
   );

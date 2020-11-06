@@ -20,7 +20,7 @@ function checkSee(){
       {see==="yes"? <MdMenu className="icon-menu" onClick={checkSee} />:
        <MdClose className="icon-menu"onClick={checkSee} />}
        </div>
-      {see==="no"?<nav className={`col-8`}style={navStyle} >
+      {see==="no"?<nav className={`col-8 , abs`}style={navStyle} >
         
         <Link className="nav-link" style={linkStyle}to="/">
           Home
