@@ -1,13 +1,176 @@
-body {
+ body {
   font-size: 18px;
-  font-family: "poppins", sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: 0;
+  background-color: rgba(252, 255, 253, 0.871);
+
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
-td {
+h1,h2,h3,h4,h5,h6{
+   font-family: 'EB Garamond', serif;
+}
+
+.App{
+  margin: 5px 50px;
+}
+.btn{
+  padding: 7px 10px ;
+  cursor: pointer;
+}
+.head-icon,.footer-icon{
+  font-size: 60px;
+
+}
+.footer-icon{
+color: #fff;
+}
+.light{
+  background-color: #fff;
+  border-top: 1px solid white;
+}
+
+.dark:hover{
+  background-color: #fff;
+  border-top: 1px solid white;
+  color: black;
+}
+.dark,.light:hover, #about p{
+  background-color: rgb(31, 26, 36);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.dark .in{
+  color: gray;
+  background-color: rgb(4, 4, 31);
+  margin: 5px;
+  vertical-align: middle;
+  width: 10px;
+}
+.desktop-container{
+  display: flex;
+  height: 100px;
+  align-items: center ;
+  
+}
+.desktop-container .first{
+  flex: 20%;
+}
+.desktop-container .second{
+  flex: 80%;
+}
+
+.nav-link{
+   padding-left:40px;
+   float: right;
+color:rgb(111, 106, 106);
+font-weight:500;
+text-decoration: none;
+font-family: "EB Garamond";
+}
+.nav-link:hover {
+text-decoration: underline;
+color: rgb(148, 221, 89);
+}
+.nav-link:active {
+  color: rgb(148, 221, 89);
+}
+#about{
+  display: flex;
+  justify-content: space-around;
+  margin-top:40px ;
+  background-color: black;
+  
+  
+}
+#about .flex{
+  flex-basis :500px;
+}
+#about h3,#about p{
+  margin-bottom: 20px;
+  font-family: "EB Garamond";
+  line-height: 1.8;
+}
+#about h3{
+  color: rgb(13, 237, 69);
+  font-size: 45px;
+}
+#question{
+  justify-content: space-evenly;
+  display: flex;
+  margin-top:40px ;
+  align-items: baseline;
+  
+
+}
+.rule{
+  border-bottom: 2px solid black;
+  flex:40%;
+  margin-right:  2em;
+  align-self: center;
+}
+.question{
+  font-weight: 900;
+  font-size: 40px;
+  flex :30%;
+  color: black;
+  margin: 0;
+}
+.bt{
+  font-weight: 900;
+align-self: center;
+margin: 0;
+
+  
+}
+.bt Button{
+  float: right;
+  padding:10px 20px;
+}
+#footer{
+  background-color: black ;
+  display: flex;
+  color: #fff;
+  margin: 5px 50px;
+  align-items: center;
+
+}
+.first,.second,.third{
+  flex: 31%;
+
+}
+footer{
+  margin-top: 40px;
+  background-color: black ;
+}
+.first a{
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(13, 237, 69);
+  padding-left: 6px;
+}
+.first a:hover{
+  color: #fff;
+  border-bottom: 4px solid rgb(13, 237, 69)
+}
+footer .second a{
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+footer 
+.second a:hover{
+  color: rgb(13, 237, 69);
+  font-size: 30px;
+}
+.third{
+  color: rgb(13, 237, 69);
+
+}
+/* td {
   font-size: 15px;
 }
 
@@ -224,4 +387,4 @@ button.btn-f {
 .icon-menu {
   width: 30px;
   height: 30px;
-}
+}  */

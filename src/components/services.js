@@ -1,14 +1,20 @@
 import React from 'react';
-import sevice from "./serviceArray"
-export default function Service(props){
-  const {title,content} = props;
+import { servicesVersion } from 'typescript';
+import services from "./serviceArray"
+export default function Service(){
+
   return(
 
-<div className="col-2">
+<div id="services">
+{services.map((service)=>{
+   return ( <div>
+    <service.icon className="icon"/>
+  <h3 >{service.title}</h3>
+  <p>{service.content}</p>
+    </div> )
+})}
 
-<props.icon />
-  <h3 >{title}</h3>
-  <p>{content}</p>
+
   </div>
 
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom"
-import { FcAssistant } from "react-icons/fc";
+import { DiCodeBadge } from "react-icons/di";
 import { MdMenu, MdClose } from "react-icons/md";
 import m from "./m";
 
@@ -14,8 +14,8 @@ function checkSee(){
   return(
     <div className="row">
       <div className="col-10">
-      <FcAssistant className="head-icon" />
-      </div >
+      <DiCodeBadge className="head-icon" />
+      </div>
       <div className="col-9" style={headStyle}>
       {see==="yes"? <MdMenu className="icon-menu" onClick={checkSee} />:
        <MdClose className="icon-menu"onClick={checkSee} />}
@@ -23,27 +23,20 @@ function checkSee(){
       {see==="no"?<nav className={`col-8 , abs`}style={navStyle} >
         
         <Link className="nav-link" style={linkStyle}to="/">
-          Home
+          HOME
         </Link>
 
-        <Link className="nav-link" style={linkStyle}to="/About">
-          About
+        <Link className="nav-link" style={linkStyle}to="/Contact">
+        CONTACT ME
         </Link>
 
-        <Link className="nav-link" style={linkStyle}to="/Services">
-          Services
+  
+
+        <Link className="nav-link" style={linkStyle}to="/Portfolio">
+         PORTFOLIO
         </Link>
 
-        <Link className="nav-link" style={linkStyle}to="/Projects">
-          Projects
-        </Link>
-
-        <Link className="nav-link" style={linkStyle}to="/Documentation">
-          Documentation
-        </Link>
-        <Link className="nav-link" style={linkStyle}to="/Experience">
-          Experience
-        </Link>
+       
         </nav>:"" }
     
         </div>

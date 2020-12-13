@@ -1,36 +1,25 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FcAssistant } from "react-icons/fc";
+import { BsFillShieldFill} from "react-icons/bs";
 
 export default function desktop(){
 
   return(
-    <div className="desk">
-      <div className="col-10" >
-  <FcAssistant className="head-icon" />
+    <div className="desktop-container">
+      <div className="first">
+  <BsFillShieldFill className="head-icon" />
       </div>
-    <nav className={`col-9`} >
+    <nav className="second">
         <Link className="nav-link" to="/">
-          Home
+          HOME
         </Link>
 
-        <Link className="nav-link" to="/About">
-          About
+      
+        <Link className="nav-link" to="/Portfolio">
+         PORTFOLIO
         </Link>
-
-        <Link className="nav-link" to="/Services">
-          Services
-        </Link>
-
-        <Link className="nav-link" to="/Projects">
-          Projects
-        </Link>
-
-        <Link className="nav-link" to="/Documentation">
-          Documentation
-        </Link>
-        <Link className="nav-link" to="/Experience">
-          Experience
+        <Link className="nav-link" to="/Contact">
+         CONTACT ME
         </Link>
         </nav>
         </div>
