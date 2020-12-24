@@ -10,7 +10,7 @@ const Nav = () => {
 
   
   return (
-    <div className="nav row">
+    <div>
      {(width >= 600)? <Desktop />:<Mobile />}
   
     </div>

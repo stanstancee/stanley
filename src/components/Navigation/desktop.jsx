@@ -1,25 +1,28 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { BsFillShieldFill} from "react-icons/bs";
+import Image from '../image'
+
 
 export default function desktop(){
 
   return(
     <div className="desktop-container">
       <div className="first">
-  <BsFillShieldFill className="head-icon" />
+   <Image />
       </div>
     <nav className="second">
-        <Link className="nav-link" to="/">
-          HOME
-        </Link>
+       
 
       
+       
+        <Link className="nav-link" to="/Contact">
+         CONTACT ME
+        </Link>
         <Link className="nav-link" to="/Portfolio">
          PORTFOLIO
         </Link>
-        <Link className="nav-link" to="/Contact">
-         CONTACT ME
+        <Link className="nav-link" to="/">
+          HOME
         </Link>
         </nav>
         </div>
