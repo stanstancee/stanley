@@ -142,10 +142,10 @@ const Portfolio = ({index, setIndex,view , setView})=>{
  
     projects.length>1?
 <div>
-<div onClick={()=>{
-   setIndex(false)
+<div  onClick={()=>{
+   setView(false)
 }}>
-<button className="back"><BsArrowLeft />Project List</button>
+<p className="btn light"> <BsArrowLeft style={{marginRight:"10px" , fontSize:"45px",verticalAlign:"middle"}}/> Project List</p>
 </div>
  <div>
 <div className="image1">

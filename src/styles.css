@@ -188,7 +188,7 @@ footer
 
 }
 
-.contact{
+.contact {
   display: flex;
 
   
@@ -226,7 +226,28 @@ footer
 .a-details input ,.a-details textarea{
   border: 1px solid rgb(86, 148, 88) ;
 }
+.m-c{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #3c3838;
+}
+.m-c-1{
+  flex: 50%;
+}
+
+.m-c-2{
+  font-size: 50px;
+}
+
+
+
+
+
+
 /* td {
+
+
   font-size: 15px;
 }
 

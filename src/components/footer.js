@@ -3,7 +3,6 @@ import  { Link } from "react-router-dom";
 // import useWindowSize from "../hooks/use-window-hook";
 import { BsFillShieldFill} from "react-icons/bs";
 import { FaFacebook, FaGithub,  FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import Image from './image'
 const Footer = ()=>{
 
 return(
@@ -11,7 +10,7 @@ return(
 <div id="footer">
 
  
-<div><Image /></div>
+<div><BsFillShieldFill className="footer-icon" /></div>
 <div className="first" >
 
 

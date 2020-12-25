@@ -22,7 +22,7 @@ const Home = () => {
     </div>
     </div>
     <About />
-    <Question message="Interested in doing a project together?" link="/Contact"  name="contact me"/>
+    <Question />
 </div>
 
   )}
