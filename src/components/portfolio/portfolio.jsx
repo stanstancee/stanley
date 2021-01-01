@@ -156,7 +156,7 @@ const Portfolio = ({index, setIndex,view , setView})=>{
     <h2>{projects[index].title}</h2>
     <p>{projects[index].bookmark} </p>
     <p className="bookmark-2">  {projects[index].bookmark2}</p>
-   <a href="" style={{display:"block"}}> <Button name="Visit Website"/></a> 
+   <a href={projects[index].url} target="__blank"  style={{display:"block"}}> <Button name="Visit Website"/></a> 
   </div>
   <div className="page-2">
     <h2>Project Background</h2>

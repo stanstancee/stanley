@@ -2,7 +2,7 @@ import React from "react";
 import Desktop from './Navigation/desktop'
 import useWindowSize from "../hooks/use-window-hook";
 import Mobile from './Navigation/mobile'
-const Nav = () => {
+const Nav = ({setIsTrue}) => {
   const size = useWindowSize();
  const {width} = size;
 
@@ -11,7 +11,7 @@ const Nav = () => {
   
   return (
     <div className="nav row">
-     {(width >= 600)? <Desktop />:<Mobile />}
+      {(width >= 760)? <Desktop setIsTrue={setIsTrue} />:<Mobile setIsTrue={setIsTrue} />}
   
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom"
-import { DiCodeBadge } from "react-icons/di";
 import { MdMenu, MdClose } from "react-icons/md";
 import Image from '../image'
 
@@ -13,6 +12,7 @@ function checkSee(){
 }
   
   return(
+    <div className="mobile">
     <div className="m-c" >
       <div  className="m-c-1">
      <Image />
@@ -21,25 +21,33 @@ function checkSee(){
       {see==="yes"? <MdMenu  onClick={checkSee} />:
        <MdClose onClick={checkSee} />}
        </div>
+       </div>
       {see==="no"?<nav>
-        
-        <Link to="/">
+        <div>
+        <Link onClick={checkSee} className="a" to="/">
           HOME
         </Link>
-
-        <Link to="/Contact">
+        </div>
+       <div>
+       <Link onClick={checkSee} className="a" to="/Contact">
         CONTACT ME
         </Link>
+       </div>
+
+        <div>
+        <Link onClick={checkSee} className="a" to="/Portfolio">
+         PORTFOLIO
+        </Link>
+        </div>
 
   
 
-        <Link to="/Portfolio">
-         PORTFOLIO
-        </Link>
+        
 
        
         </nav>:"" }
     
+       
         </div>
   )
 }

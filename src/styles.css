@@ -12,8 +12,8 @@
 }
 
 .img-img{
- height: 80px;
-  width:80px;
+ height: 4rem;
+  width:4rem;
   border-radius: 45%;
   border: 4px solid  #b8b4b4 ;
  
@@ -163,18 +163,18 @@ footer{
   margin-top: 80px;
   background-color: #554f4f ;
 }
-.first a{
+.first a, .a{
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
   padding-left: 6px;
 }
-.first a:hover{
+.first a:hover, .a:hover{
   color: #fff;
   border-bottom: 4px solid rgb(13, 237, 69)
 }
 footer .second a{
-  padding: 10px;
+  padding: 0.6em;
   color:   rgb(86, 148, 88) ;
   font-size: 20px;
 }
@@ -226,11 +226,16 @@ footer
 .a-details input ,.a-details textarea{
   border: 1px solid rgb(86, 148, 88) ;
 }
+.mobile{
+  background-color: #3c3838;
+  position: relative;
+}
 .m-c{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #3c3838;
+ 
+  
 }
 .m-c-1{
   flex: 50%;
@@ -238,8 +243,21 @@ footer
 
 .m-c-2{
   font-size: 50px;
+  color: #fff;
 }
 
+.mobile nav{
+  display: flex;
+  flex-direction: column;
+ justify-content: left;
+
+
+  
+}
+.mobile nav div{
+  margin:1.1em 0;
+
+}
 
 
 

@@ -1,13 +1,14 @@
 import Button from "./button";
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import canvasJsReact  from ".././assets/canvasjs.react";
 const {CanvasJS} = canvasJsReact;
 
-export default function About(){
+export default function About({setIsTrue,isTrue}){
 
 window.addEventListener("scroll" ,()=>{
     if(window.scrollY ===200){
+        setIsTrue(true)
 const chart = new CanvasJS.Chart(
     "chartContainer",{
     animationEnabled: true,
@@ -59,7 +60,9 @@ const chart = new CanvasJS.Chart(
 }
 )
 chart.render();
-}})
+}
+
+})
 
 
 
@@ -68,7 +71,7 @@ chart.render();
             <div id="about">
         <div className="flex" >
 
-        <div id="chartContainer"></div> 
+     { isTrue ? <div id="chartContainer" ></div> :""}
         </div>
             
             

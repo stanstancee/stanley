@@ -10,7 +10,7 @@ const Question = (props)=>{
             <div className="rule"></div>
             <div  className="bt" >
             <Link to={props.link}>
-            <Button icon={true}  name={props.name}/>
+            <Button icon={true}  name={props.name} />
                </Link >
             </div>
             </div>

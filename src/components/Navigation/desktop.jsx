@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Image from '../image'
 
 
-export default function desktop(){
+export default function desktop({setIsTrue}){
 
   return(
     <div className="desktop-container">
@@ -15,10 +15,14 @@ export default function desktop(){
 
       
        
-        <Link className="nav-link" to="/Contact">
+        <Link className="nav-link" to="/Contact" onClick={()=>{
+          setIsTrue(false)
+        }} >
          CONTACT ME
         </Link>
-        <Link className="nav-link" to="/Portfolio">
+        <Link className="nav-link" to="/Portfolio"  onClick={()=>{
+          setIsTrue(false)
+        }}>
          PORTFOLIO
         </Link>
         <Link className="nav-link" to="/">

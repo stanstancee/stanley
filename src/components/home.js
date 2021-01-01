@@ -6,7 +6,7 @@ import Button from "./button";
 import "./home-style.css"
 import Question from "./question";
 import Service from "./services";
-const Home = () => {
+const Home = ({setIsTrue,isTrue}) => {
 
   return (
     <div>
@@ -21,8 +21,8 @@ const Home = () => {
     <button className="btn-2"> <a  className="a-2" href="https://www.linkedin.com/in/stancee/">Linkedin<FaLinkedin className="i-2"  /></a></button>
     </div>
     </div>
-    <About />
-    <Question />
+    <About setIsTrue={setIsTrue} isTrue={isTrue}/>
+    <Question  message="Interested in doing a project together?" name="contact me" link="/Contact"/>
 </div>
 
   )}
