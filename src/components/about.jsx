@@ -1,5 +1,5 @@
 import {Button ,Spinner}from  'react-bootstrap'
-import image from "../assets/me.jpeg"
+import image from "../assets/me.jpg"
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import canvasJsReact  from ".././assets/canvasjs.react";
