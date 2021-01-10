@@ -14,7 +14,7 @@ export default function About({setIsTrue,isTrue}){
 
 window.addEventListener("scroll" ,()=>{
     if(window.scrollY >=460){
-        setInterval( setIsTrue(true),10000)
+         setIsTrue(true)
        
 const chart = new CanvasJS.Chart(
     "chartContainer",{
@@ -68,10 +68,7 @@ const chart = new CanvasJS.Chart(
 )
 chart.render();
 }
-else if(window.scrollY < 460){
-  setIsTrue(false)
-  
-}
+
 
 if(window.scrollY >460){
     setAnime(true)
