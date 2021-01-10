@@ -1,6 +1,6 @@
 .home{
     /* background: url("https://res.cloudinary.com/chekwube/image/upload/v1607556841/photostudio_1607509518664_y0pdmc.png"); */
-    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , url("C:/Users/hp/Desktop/port-folio/src/assets/monitor.png") ;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) , url("../assets/monitor.png") ;
     filter:grayscale(30%);
    height: 400px;
     background-size: 100% 100%;
