@@ -84,7 +84,7 @@ window.addEventListener("scroll" ,()=>{
     setIsTrue(false);
 
 }
-  
+  })
     return(
             <div id="about"  style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
         <div className="flex" >
