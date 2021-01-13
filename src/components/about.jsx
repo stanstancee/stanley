@@ -18,7 +18,7 @@ window.addEventListener("scroll" ,()=>{
        
 const chart = new CanvasJS.Chart(
     "chartContainer",{
-    animationEnabled: `${scrollY===460? true:false}`,
+    animationEnabled: `${window.scrollY===460? true:false}`,
     animationDuration:3000,
     theme:"light1",
     title:{
