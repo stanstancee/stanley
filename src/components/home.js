@@ -39,7 +39,7 @@ console.log(currentTime)
 </Card>
     </article>
     <div className="social">
-    <button className="btn-1"> <a className="a-1" href="https:/github.com/stanstancee"><FaGithub className="i-1" />GitHub</a>  </button>
+    <button className="btn-1"> <a className="a-1" href="https://github.com/stanstancee"><FaGithub className="i-1" />GitHub</a>  </button>
     <button className="btn-2"> <a  className="a-2" href="https://www.linkedin.com/in/stancee/">Linkedin<FaLinkedin className="i-2"  /></a></button>
     </div>
     </div>
