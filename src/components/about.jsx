@@ -12,14 +12,11 @@ const {CanvasJS} = canvasJsReact;
 export default function About({setIsTrue,isTrue}){
     const [anime,setAnime] = useState(false)
 
-window.addEventListener("scroll" ,()=>{
-    if(window.scrollY >=460){
-         setIsTrue(true)
-       
+       window.load(()=>{
 const chart = new CanvasJS.Chart(
     "chartContainer",{
-  //  animationEnabled: `${window.scrollY===460? true:false}`,
-   // animationDuration:3000,
+    animationEnabled: `${window.scrollY==460? true:false}`,
+   animationDuration:3000,
     theme:"light1",
     title:{
       text: "Skills based on previous projects and Pluralsight IQ Test"
@@ -68,20 +65,25 @@ const chart = new CanvasJS.Chart(
 )
 chart.render();
 }
+)
 
 
-if(window.scrollY >460){
+  
+ 
+
+window.addEventListener("scroll" ,()=>{
+    if(window.scrollY >=460){
+         setIsTrue(true)
+
     setAnime(true)
     
 }
-else if(window.scrollY < 400){
+ if(window.scrollY < 400){
 
-    setAnime(false)
-  }
-})
- 
+    setAnime(false);
+    setIsTrue(false);
 
-
+}
   
     return(
             <div id="about"  style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
