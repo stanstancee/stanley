@@ -13,7 +13,7 @@ export default function About({setIsTrue,isTrue}){
     const [anime,setAnime] = useState(false)
 
 window.addEventListener("scroll" ,()=>{
-    if(window.scrollY ==460){
+    if(window.scrollY >=460){
          setIsTrue(true)
        
 const chart = new CanvasJS.Chart(
@@ -72,6 +72,7 @@ chart.render();
 
 if(window.scrollY >460){
     setAnime(true)
+    
 }
 else if(window.scrollY < 400){
 
