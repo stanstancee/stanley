@@ -11,11 +11,6 @@ const {CanvasJS} = canvasJsReact;
 
 export default function About({setIsTrue,isTrue}){
     const [anime,setAnime] = useState(false)
-
-window.addEventListener("scroll" ,()=>{
-    if(window.scrollY >460){
-         setIsTrue(true)
-       
 const chart = new CanvasJS.Chart(
     "chartContainer",{
     animationEnabled: true,
@@ -66,14 +61,15 @@ const chart = new CanvasJS.Chart(
       ]
 }
 )
-chart.render();
+chart.render()
+window.addEventListener("scroll" ,()=>{
+    if(window.scrollY >460){
+         setIsTrue(true)
+       setAnime(true)
+
+;
 }
 
-
-if(window.scrollY >460){
-    setAnime(true)
-    
-}
 else if(window.scrollY < 400){
 
     setAnime(false)
