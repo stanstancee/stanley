@@ -18,8 +18,8 @@ window.addEventListener("scroll" ,()=>{
        
 const chart = new CanvasJS.Chart(
     "chartContainer",{
-    animationEnabled: `${window.scrollY===460? true:false}`,
-    animationDuration:3000,
+  //  animationEnabled: `${window.scrollY===460? true:false}`,
+   // animationDuration:3000,
     theme:"light1",
     title:{
       text: "Skills based on previous projects and Pluralsight IQ Test"
