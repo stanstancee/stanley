@@ -6,16 +6,15 @@ import canvasJsReact  from ".././assets/canvasjs.react";
 import {FaSmile} from "react-icons/fa";
 
 
-const {CanvasJS} = canvasJsReact;
+const {CanvasJSChart} = canvasJsReact;
 
+let chart;
 
 export default function About({setIsTrue,isTrue}){
     const [anime,setAnime] = useState(false)
 
-       window.load(()=>{
-const chart = new CanvasJS.Chart(
-    "chartContainer",{
-    animationEnabled: `${window.scrollY==460? true:false}`,
+  const options = {
+    animationEnabled:true ,
    animationDuration:3000,
     theme:"light1",
     title:{
@@ -62,10 +61,7 @@ const chart = new CanvasJS.Chart(
         }
       ]
 }
-)
-chart.render();
-}
-)
+
 
 
   
@@ -78,7 +74,7 @@ window.addEventListener("scroll" ,()=>{
     setAnime(true)
     
 }
- if(window.scrollY < 400){
+ if(window.scrollY < 250){
 
     setAnime(false);
     setIsTrue(false);
@@ -89,7 +85,11 @@ window.addEventListener("scroll" ,()=>{
             <div id="about"  style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
         <div className="flex" >
 
-     { isTrue ? <div id="chartContainer" ></div> :<img  src={image} alt="stanley" style={{width:"100%",height:"400px",filter:"grayscale(50%)"}}></img>}
+     { isTrue ?<CanvasJSChart
+        options={options}
+        onRef={ref => (chart = ref)} //Reference to the chart-instance
+    
+      /> :<img  src={image} alt="stanley" style={{width:"100%",height:"400px",filter:"grayscale(50%)"}}></img>}
         </div>
             
             

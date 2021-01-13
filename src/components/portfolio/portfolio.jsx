@@ -81,7 +81,8 @@ const Portfolio = ({index, setIndex,view , setView})=>{
           //////////////////////////////////////////////
 
       }
-        }
+    }
+        
         const PreviousFunc = ()=>{
             if (index > 0){setIndex((previous)=>{
                 return  previous -1
@@ -103,17 +104,17 @@ const Portfolio = ({index, setIndex,view , setView})=>{
           })
         }
           else{
-            {setIndex2((prev)=>{
+            setIndex2((prev)=>{
               return {
                 ...prev,
                  next:prev.next+2
               }
               })
           }
-         console.log(index2.next,index2.previous)
+     
       
 
-        }
+      
           //////////////////////////////////////////////  
             if (index2.previous > 0){setIndex2((prev)=>{
               return {
