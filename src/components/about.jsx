@@ -6,7 +6,7 @@ import canvasJsReact  from ".././assets/canvasjs.react";
 import {FaSmile} from "react-icons/fa";
 
 
-const {CanvasJSChart} = canvasJsReact;
+//const {CanvasJSChart} = canvasJsReact;
 
 let chart;
 
@@ -63,12 +63,12 @@ export default function About({setIsTrue,isTrue}){
 }
 
 
-
+  
   
  
 
 window.addEventListener("scroll" ,()=>{
-    if(window.scrollY >=460){
+    if(window.scrollY >=400){
          setIsTrue(true)
 
     setAnime(true)
@@ -85,11 +85,7 @@ window.addEventListener("scroll" ,()=>{
             <div id="about"  style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
         <div className="flex" >
 
-     { isTrue ?<CanvasJSChart
-        options={options}
-        onRef={ref => (chart = ref)} //Reference to the chart-instance
-    
-      /> :<img  src={image} alt="stanley" style={{width:"100%",height:"400px",filter:"grayscale(50%)"}}></img>}
+      <img  src={image} alt="stanley" style={{width:"100%",height:"400px",filter:"grayscale(50%)"}}></img>
         </div>
             
             

@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <Router>
-    <div className="App" >
+    <main className="App" >
       <Nav setIsTrue={setIsTrue}/>
       <Switch>
           <Route exact path="/">
@@ -34,7 +34,7 @@ export default function App() {
              <Contact />
          </Route>
         </Switch>
-    </div>
+    </main>
     <Logo />
     <Footer />
     </Router>

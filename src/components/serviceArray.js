@@ -3,18 +3,19 @@ import {MdHttp as restApi} from 'react-icons/md'
 import { FaReact as react } from "react-icons/fa";
 
 const service=[
+
 {
-  id:1,title:"Progressive Web App", content:
-"Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. With service workers, I can create reliably fast web pages and offline experiences."
-,icon:pwd
-},
-{
-  id:2,title:"RESTful API", content:"RESTful web services are built to work best on the Web.  In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations.",
+  id:0,title:"Back End", content:"With NodeJs I build services to manage the interchange of data between the server and the users. I develop server-side logic, define and maintain central database, and ensure high performance and responsiveness from the front-end." ,
 icon:restApi
 },
 {
-id:3, title:"Single Page Application",content:"I use React for building user interfaces specifically for single-page applications.Also handling the view layer for web and mobile apps. This also allows me to create reusable UI components."
+id:1, title:"Front End",content:"As a front-end developer, I determine the structure of web pages, develope features to enhance the user experience, ensure web design is optimized for smartphones and also maximize speed and scalability."
 ,icon:react
+},
+{
+ id:2,title:"Full Stack", content:
+"Having deloped my skills on both sides of web development. I essentially cover the full stack of technology for a website, working in variety of different roles allowing me to develop a diverse set of skills."
+,icon:pwd
 }
 
 ]
