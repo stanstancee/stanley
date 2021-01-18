@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     display: flex;
      align-items: center;
+     
 
   
    
@@ -111,9 +112,9 @@
 @media only screen and (max-width: 768px) {
     .home{
       flex-direction: column;
-      align-items: flex-start;
+      /* align-items: flex-start; */
       justify-items: left;
-      margin-bottom: 2em ;
+      margin-bottom: 4em ;
     }
 .right-image{
     display: none;

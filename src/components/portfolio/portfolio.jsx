@@ -142,7 +142,7 @@ const Portfolio = ({index, setIndex,view , setView})=>{
 
    return(
      
-     <div>
+     <div className="portfolio">
      {loading? <div id="divElement"> 
    
      <Spinner animation="grow" variant="danger" />

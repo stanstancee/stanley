@@ -14,7 +14,7 @@ return(
 <div className="first" >
 
 
-<div><Link className="nv"  to="/About" >
+<div><Link className="nv"  to="/" >
           HOME
         </Link>
 

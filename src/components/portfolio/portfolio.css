@@ -77,6 +77,9 @@
 .p-list-1-o, .p-list-1{
     border-top: 3px solid rgb(86, 148, 88)  ;
 }
+.portfolio h3, .portfolio h2{
+    font-weight: 900;
+}
 #divElement{
     position: relative;
     top: 50%;
@@ -123,6 +126,9 @@
 }
 .p-list-1{
     order: 2;
+}
+.title{
+    display: none;
 }
   }
   

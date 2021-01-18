@@ -78,9 +78,9 @@ useEffect(() => {
           });
    }
   return (
-    <div  style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
+    <div id="contact" style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
     
-      <h1>Get In Touch With Us.</h1>
+      <h1>Get In Touch With Me.</h1>
       <div className="contact">
       <address className='row-1'>
         
@@ -118,7 +118,7 @@ useEffect(() => {
                
        
       </address>
-      <div >
+      <div  className="form">
 {  submitted && counter>1 ?<Success counter={counter} />:
     <form onSubmit={handleSubmit}>
    <h3 className="para">Get In Touch</h3>
@@ -143,7 +143,7 @@ useEffect(() => {
 
   </div> 
 <div className="a-details">
-{loading? <Button variant="secondary" disabled>
+{loading? <Button variant="secondary" size="lg" disabled>
     <Spinner
       as="span"
       animation="grow"
@@ -152,7 +152,7 @@ useEffect(() => {
       aria-hidden="true"
     />
     Loading...
-  </Button>: <Button  type="submit" variant="secondary" >Submit</Button>}
+  </Button>: <Button  type="submit" variant="secondary" size="lg" >Submit</Button>}
 </div>
 
   

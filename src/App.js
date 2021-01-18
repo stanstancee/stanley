@@ -12,6 +12,9 @@ import {
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact";
 import Logo from "./components/logo";
+import ScrollToTop from './components/scrolltotop'
+
+
 export default function App() {
   const [index, setIndex] = useState(0);
   const [view,setView] = useState(false)
@@ -20,8 +23,10 @@ export default function App() {
 
 
   return (
+  
     <Router>
-    <main className="App" >
+      <ScrollToTop>
+    <main className="App" id="first" >
       <Nav setIsTrue={setIsTrue}/>
       <Switch>
           <Route exact path="/">
@@ -37,6 +42,8 @@ export default function App() {
     </main>
     <Logo />
     <Footer />
+    </ScrollToTop>
     </Router>
+    
   );
 }

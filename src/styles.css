@@ -5,7 +5,9 @@
   background-color: rgba(251, 253, 253, 0.994);
 
 }
-
+p{
+  font-family: 'Public Sans', sans-serif;  
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,20 +102,11 @@ color: rgb(148, 221, 89);
 
 }
 
-/* Animation */
-#about p.an {
-  animation: animated-text 1s steps(30,end) 1s 1 normal both;
-           
-}
+
 
 /* text animation */
 
-@keyframes animated-text{
- 0%{ width: 0;font-size: 1px;}
- 25% {width: 100px;}
- 70%{width: 300px;}
- 100%{width:auto;font-size: 18px;}
-}
+
 
 
 #about{
@@ -148,11 +141,7 @@ color: rgb(148, 221, 89);
 
 
 }
-.bottom{
-  font-family: "Lobster", cursive;
-  display: block;
-  color: rgb(86, 148, 88);
-}
+
 
 #about h3{
   font-size: 45px;
@@ -277,8 +266,12 @@ footer
 
 .contact {
   display: flex;
+  justify-content: space-around;
 
   
+}
+.form,.contact address{
+  width: 45%;
 }
 
 /* .row-1,.row-2{
@@ -359,8 +352,7 @@ section.logo-container{
 
 .head{
    margin-bottom: 1em;
-   border-bottom: 5px solid rgb(86, 148, 88);
-   display: inline;
+   text-align: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -379,10 +371,7 @@ section.logo-container{
 #about{
   margin-top: 0;
 }
-#about p.an {
-  animation: animated-text 3s steps(30,end) 5s 1 normal both;
-           
-}
+
 #about .flex {
 
   text-align: center;

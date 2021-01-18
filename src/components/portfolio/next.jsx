@@ -7,7 +7,7 @@ const {projects,index,NextFunc,name} = props;
         <div onClick={NextFunc} className="next-me">
      { name==="Previous" && <props.BsChevron className="next-1"/>}
      <div  className="next-2">
-     <h3> {
+     <h3 className="title"> {
           index >  projects.length ?projects[0]["title"]: projects[index]["title"]}
           </h3> 
         <p className="p-name">{name}</p>
