@@ -396,6 +396,9 @@ iframe{
 .App{
   margin:0 15px;
   }
+  .form,.contact address{
+    width: 100%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
