@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import axios from "axios";
+// import axios from "axios";
 import Success from "./success";
 import Question from '../components/question'
 
@@ -24,6 +24,7 @@ message:""
 const [submitted, setSubmit] = useState(false);
 const [counter, setCounter] = useState(20);
 const [loading, setLoading] = useState(false);
+
 
 useEffect(() => {
   
@@ -52,31 +53,47 @@ useEffect(() => {
    const handleSubmit = (event)=>{
     setLoading(true);
     event.preventDefault();
+    const form = event.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        setLoading(false);
+         setSubmit(true)
+         setCounter(20)
+      } 
+    };
+    xhr.send(data);
+ 
    
-    let {name,email, phone, message} =contact;
-        const userContact = {
-          name:name,
-          email:email,
-          phone:phone,
-          message:message
-        }
-          axios.post("https://intense-brushlands-67616.herokuapp.com/contact", userContact )
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
-            setLoading(false);
-            setSubmit(true)
-            setCounter(20)
-            setContact({
-              name:"",
-              email:"",
-               phone:"",
-              message:""
+    // let {name,email, phone, message} =contact;
+    //     const userContact = {
+    //       name:name,
+    //       email:email,
+    //       phone:phone,
+    //       message:message
+    //     }
+    //       axios.post("https://intense-brushlands-67616.herokuapp.com/contact", userContact )
+    //       .then(res => {
+    //         console.log(res);
+    //         console.log(res.data);
+    //         setLoading(false);
+    //         setSubmit(true)
+    //         setCounter(20)
+    //         setContact({
+    //           name:"",
+    //           email:"",
+    //            phone:"",
+    //           message:""
 
-            })
+    //         })
            
-          });
-   }
+    //       });
+}
   return (
     <div id="contact" style={{backgroundColor:"hsl(0, 0%, 97%)",color:"hsl(255, 11%, 22%)"}}>
     
@@ -120,7 +137,10 @@ useEffect(() => {
       </address>
       <div  className="form">
 {  submitted && counter>1 ?<Success counter={counter} />:
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}
+        action="https://formspree.io/f/mdopjqeb"
+        method="POST"
+    >
    <h3 className="para">Get In Touch</h3>
    <div className="a-details">
    <label htmlFor="name" required><span><Name className="para"/> </span> Name </label>

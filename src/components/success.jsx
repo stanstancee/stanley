@@ -8,10 +8,10 @@ const Success = (props)=>{
    return(
      <div>
        
-    <h2 style={margin}>Thanks for contacting me. I will get back to you shortly</h2>
+    <h2 style={margin}>Thanks for contacting me. I will get back to you as soon as can. </h2>
     <h4 style={margin} className="name">This page will redirect in {props.counter} seconds...</h4>
 <p style={margin} className="para">
-You advice or contribution is highly demanded as it will help me greatly in my career. 
+Please, don't forget to connect with me on my social handles below. 
 
 </p>
 <Link to="/"  style={margin}><Button variant="secondary">Go Home</Button></Link>
