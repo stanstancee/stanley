@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import axios from "axios";
 import Success from "./success";
 import Question from '../components/question'
+
 import {
   FaMapMarkerAlt as Location,
   FaPhone as Phone,
@@ -9,14 +10,15 @@ import {
   FaUserAlt as Name,
   FaPenSquare as Message
 } from "react-icons/fa";
-import  Button  from "../components/button";
 
+import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner"
 export default function Contact() {
 const [contact, setContact] = useState({
-name:"Your Name",
-email:"your@mail.com",
-phone:"234",
-message:"message"
+name:"",
+email:"",
+phone:"",
+message:""
 
 });
 const [submitted, setSubmit] = useState(false);
@@ -66,10 +68,10 @@ useEffect(() => {
             setSubmit(true)
             setCounter(20)
             setContact({
-              name:"Your Name",
-              email:"your@mail.com",
-               phone:"234",
-              message:"message"
+              name:"",
+              email:"",
+               phone:"",
+              message:""
 
             })
            
@@ -105,50 +107,61 @@ useEffect(() => {
           
           
   
-              <div className="a-details">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.0457982824582!2d3.328393114449821!3d6.641235223626713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b914fff2c63fd%3A0xcfb813da136b6291!2sCollege%20Rd%2C%20Lagos!5e0!3m2!1sen!2sng!4v1604334658423!5m2!1sen!2sng" 
- height="300" frameborder="0"  aria-hidden="false" tabindex="0" title="my location"></iframe>
-              </div>  
-             
            
+          <div className="a-details">   <iframe     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.0457982824582!2d3.328393114449821!3d6.641235223626713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b914fff2c63fd%3A0xcfb813da136b6291!2sCollege%20Rd%2C%20Lagos!5e0!3m2!1sen!2sng!4v1604334658423!5m2!1sen!2sng" 
+ height="300" frameborder="0"  aria-hidden="false" tabindex="0" title="my location"></iframe>
+             
+             
+             </div>   
             
               
                
        
       </address>
-      <div className="row">
+      <div >
 {  submitted && counter>1 ?<Success counter={counter} />:
     <form onSubmit={handleSubmit}>
    <h3 className="para">Get In Touch</h3>
    <div className="a-details">
    <label for="name" required><span><Name className="para"/> </span> Name </label>
-   <input type='text' onChange={handleChange} name="name" value={contact.name} />
+   <input type='text' onChange={handleChange} name="name" value={contact.name} placeholder="Luke Prince" required />
    </div>
    <div className="a-details">
    <label for="email" required><span><Mail className="para" /> </span> Email </label>
-   <input type='email' onChange={handleChange}name="email" value={contact.email} />
+   <input type='email' onChange={handleChange}name="email" value={contact.email} placeholder="name@email.com" required  />
    </div>
    <div className="a-details">
    <label for="phone"><span><Phone className="para" /> </span> Phone </label>
-   <input type='tel' onChange={handleChange} name="phone" value={contact.phone} />  
+   <input type='tel' onChange={handleChange} name="phone" placeholder="234800008990" value={contact.phone}required  />  
    </div>
    <div className="a-details">
-   <label  className="col-10" for="message"> <span><Message className="para"/></span>Message</label>
-  <textarea cols="60" rows="5" onChange={handleChange} name="message" value={contact.message} ></textarea>
+   <label   for="message"> <span><Message className="para"/></span>Message</label>
+  <textarea cols="60" rows="5" onChange={handleChange} name="message" placeholder="I want to work with you." value={contact.message} required  ></textarea>
  
 
 
 
   </div> 
+<div className="a-details">
+{loading? <Button variant="secondary" disabled>
+    <Spinner
+      as="span"
+      animation="grow"
+      size="sm"
+      role="status"
+      aria-hidden="true"
+    />
+    Loading...
+  </Button>: <Button  type="submit" variant="secondary" >Submit</Button>}
+</div>
 
-  <Button  icon={true} name={loading?"Loading...":"Submit"}  type="submit"  />
   
 
     </form>
 }
       </div>
       </div>
-      <Question  message="Take a look at my previous Projects" name="contact me" link="/Contact"/>
+      <Question  message="Take a look at my previous Projects" name="Portfolio" link="/Portfolio"/>
     </div> 
   );
 }

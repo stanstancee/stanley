@@ -1,8 +1,8 @@
-import React, {useEffect,useState} from "react";
+import React, {useState} from "react";
 import "./styles.css";
 import Nav from "./components/nav";
 import Home from "./components/home"
-import useWindowSize from "./hooks/use-window-hook";
+
 import Footer from "./components/footer";
 import {
   BrowserRouter as Router,
@@ -11,13 +11,14 @@ import {
 } from "react-router-dom";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact";
+import Logo from "./components/logo";
 export default function App() {
   const [index, setIndex] = useState(0);
   const [view,setView] = useState(false)
   const [isTrue,setIsTrue] = useState(false) 
 
 
-  const size = useWindowSize();
+
   return (
     <Router>
     <div className="App" >
@@ -34,6 +35,7 @@ export default function App() {
          </Route>
         </Switch>
     </div>
+    <Logo />
     <Footer />
     </Router>
   );

@@ -1,0 +1,15 @@
+{
+    "short_name": "My Portfolio",
+    "name": "Welcome to My Website",
+    "icons": [
+        {
+            "src": "/images/logo.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "hsl(255, 11%, 22%)",
+    "background_color": "hsl(0, 0%, 97%)"
+}

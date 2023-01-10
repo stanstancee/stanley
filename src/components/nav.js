@@ -10,8 +10,8 @@ const Nav = ({setIsTrue}) => {
 
   
   return (
-    <div className="nav row">
-      {(width >= 760)? <Desktop setIsTrue={setIsTrue} />:<Mobile setIsTrue={setIsTrue} />}
+    <div className="">
+      {(width >= 768)? <Desktop setIsTrue={setIsTrue} />:<Mobile setIsTrue={setIsTrue} />}
   
     </div>
   );

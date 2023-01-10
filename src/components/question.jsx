@@ -1,6 +1,6 @@
 
 import React from "react";
-import Button from './button'
+import {Button }from  'react-bootstrap'
 import {Link} from 'react-router-dom'
 
 const Question = (props)=>{
@@ -10,7 +10,7 @@ const Question = (props)=>{
             <div className="rule"></div>
             <div  className="bt" >
             <Link to={props.link}>
-            <Button icon={true}  name={props.name} />
+            <Button variant="secondary" block>{props.name}</Button>
                </Link >
             </div>
             </div>

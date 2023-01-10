@@ -1,7 +1,7 @@
 import React from "react";
 import  { Link } from "react-router-dom";
 // import useWindowSize from "../hooks/use-window-hook";
-import { BsFillShieldFill} from "react-icons/bs";
+import Image from './image'
 import { FaFacebook, FaGithub,  FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 const Footer = ()=>{
 
@@ -10,21 +10,21 @@ return(
 <div id="footer">
 
  
-<div><BsFillShieldFill className="footer-icon" /></div>
+<Image />
 <div className="first" >
 
 
-<div><Link  to="/About" >
+<div><Link className="nv"  to="/About" >
           HOME
         </Link>
 
  
 
-<Link  to="/Portfolio" >
+<Link className="nv" to="/Portfolio" >
          PORTFOLIO
         </Link>
  
-  <Link  to="/Contact">
+  <Link className="nv"  to="/Contact">
      CONTACT ME
 
  </Link>
@@ -51,7 +51,7 @@ return(
 
  
 <div className="third">
-<h4 className="paragraph"> © created by Stanley Ifeoha. All Rights Reserved</h4>
+<p className="paragraph"> © created by Stanley Ifeoha. All Rights Reserved</p>
   </div>
 
 </div>

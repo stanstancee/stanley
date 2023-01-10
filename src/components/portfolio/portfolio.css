@@ -77,6 +77,52 @@
 .p-list-1-o, .p-list-1{
     border-top: 3px solid rgb(86, 148, 88)  ;
 }
+#divElement{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: 250px;
+    margin-left: -50px;
+    width: 100px;
+    height: 500px;
+}​
 #con{
     font-family: "open sans";
 }
+@media only screen and (max-width: 768px) {
+ .details{
+       flex-direction: column;
+   }
+   Button{
+       margin-top: 0;
+   }
+  
+   .page-2{
+       border-top: 3px solid rgb(86, 148, 88)
+
+   }
+   .p-list-1,.p-list-2{
+    width: 100%;
+    margin-top: 0px ;
+    
+    
+}
+.p-list{
+  flex-direction: column;  
+  margin:0 10px ;
+  height: fit-content;
+  margin-top: 50px;
+}
+.btn{
+    margin-bottom: 20px;
+}
+.p-list img{
+    width: 100%;
+    
+    
+}
+.p-list-1{
+    order: 2;
+}
+  }
+  

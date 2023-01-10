@@ -3,28 +3,32 @@ import './portfolio.css';
 import axios from "axios";
 import {BsChevronLeft, BsChevronRight} from 'react-icons/bs'
 import Next from "./next";
-import Button from '../button'
+import {Button ,Spinner}from  'react-bootstrap'
 import Question from "../question";
 import PortfolioList from "./portfolio-list";
-import { BsArrowLeft} from 'react-icons/bs'
+import { BsArrowLeft} from 'react-icons/bs';
 
 const Portfolio = ({index, setIndex,view , setView})=>{
 
     const [projects, setProject] = useState([])
     
     const [index2, setIndex2] = useState({next:1,previous:0});
+    const [loading,setLoading] = useState(true);
 
    useEffect(() => {
         const fetchData = async () => {
         const response = await axios.get(`https://intense-brushlands-67616.herokuapp.com/api/project`);
         setProject(response.data);
-        console.log(response.data)
+        console.log(response.data);
+       
+       
         setIndex2(
           {
             next:1,
             previous:response.data.length -1
           }
         )
+        setLoading(false)
         }
         fetchData();
       },[setProject]);
@@ -136,6 +140,15 @@ const Portfolio = ({index, setIndex,view , setView})=>{
   }
 
    return(
+     
+     <div>
+     {loading? <div id="divElement"> 
+   
+     <Spinner animation="grow" variant="danger" />
+  <Spinner animation="grow" variant="warning" />
+  <Spinner animation="grow" variant="info" />
+  <Spinner animation="grow" variant="primary" />
+  <Spinner animation="grow" variant="dark" /></div> :
   <div id="contact">
 
   {view? 
@@ -145,7 +158,7 @@ const Portfolio = ({index, setIndex,view , setView})=>{
 <div  onClick={()=>{
    setView(false)
 }}>
-<p className="btn light"> <BsArrowLeft style={{marginRight:"10px" , fontSize:"45px",verticalAlign:"middle"}}/> Project List</p>
+<Button variant="light"><BsArrowLeft style={{marginRight:"10px" , fontSize:"45px",verticalAlign:"middle"}}/> Project List</Button>
 </div>
  <div>
 <div className="image1">
@@ -156,7 +169,7 @@ const Portfolio = ({index, setIndex,view , setView})=>{
     <h2>{projects[index].title}</h2>
     <p>{projects[index].bookmark} </p>
     <p className="bookmark-2">  {projects[index].bookmark2}</p>
-   <a href={projects[index].url} target="__blank"  style={{display:"block"}}> <Button name="Visit Website"/></a> 
+   <a href={projects[index].url} target="__blank"  style={{display:"block"}}> <Button variant="secondary" className="btn">Visit Website</Button></a> 
   </div>
   <div className="page-2">
     <h2>Project Background</h2>
@@ -182,6 +195,9 @@ const Portfolio = ({index, setIndex,view , setView})=>{
 }
 
   </div>
+     }
+     </div>
+
    )
 }
 export default Portfolio

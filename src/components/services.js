@@ -1,5 +1,4 @@
 import React from 'react';
-import { servicesVersion } from 'typescript';
 import services from "./serviceArray"
 export default function Service(){
 

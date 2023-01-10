@@ -1,4 +1,4 @@
-import image from "../assets/me.jpg";
+import image from "../assets/logo.jpg";
 import React from 'react'
 
 const Image = (props)=>{

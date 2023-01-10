@@ -1,20 +1,42 @@
 import React from "react";
 import {FaGithub, FaLinkedin} from "react-icons/fa"
-import image from "../assets/monitor.png";
 import About from "./about";
-import Button from "./button";
+import {Button, Card }from  'react-bootstrap'
 import "./home-style.css"
 import Question from "./question";
-import Service from "./services";
-const Home = ({setIsTrue,isTrue}) => {
+import {BiSmile} from 'react-icons/bi'
+import {Link} from "react-router-dom"
 
+const Home = ({setIsTrue,isTrue}) => {
+const date = new Date();
+
+
+const currentTime  = date.getHours();
+let greeting;
+if(currentTime >= 12 && currentTime<=16){
+  greeting ="Good Aftrernoon"
+}
+else if(currentTime<12){
+  greeting="Good Morning"
+}
+else{
+  greeting = "Good Evening"
+}
+console.log(currentTime)
   return (
     <div>
     <div className="home">
     <article>
-    <p>Hey, I'm Stanley Ifeoha. I'm a Fullstack web developer.</p>
-      <Button  icon={true} name="about me"/>
-      
+  
+      <Card >
+  <Card.Body>
+    <Card.Title>{greeting}  <BiSmile className="smile" />  </Card.Title>
+    <Card.Text>
+    I'm Stanley Ifeoha,  Fullstack web developer.
+    </Card.Text>
+    <Link to="/Portfolio">  <Button variant="info">Check My Work</Button></Link>
+  </Card.Body>
+</Card>
     </article>
     <div className="social">
     <button className="btn-1"> <a className="a-1" href="https:/github.com/stanstancee"><FaGithub className="i-1" />GitHub</a>  </button>
@@ -23,6 +45,7 @@ const Home = ({setIsTrue,isTrue}) => {
     </div>
     <About setIsTrue={setIsTrue} isTrue={isTrue}/>
     <Question  message="Interested in doing a project together?" name="contact me" link="/Contact"/>
+
 </div>
 
   )}
