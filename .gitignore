@@ -1,4 +1,4 @@
 node_modules
-style-guide.md
-debug.log
-.gitignore
+*/style-guide
+/debug.log
+
